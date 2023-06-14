@@ -10,10 +10,11 @@
 
 }
 
-.anchor-style:hover {
+.anchor-style:hover, .anchor-style:focus,.anchor-style:active {
     color: #ffbb33;
     border-bottom:2px solid #ffbb33 ;
 }
+
 
 .nav-style {
     background-color: #222;
