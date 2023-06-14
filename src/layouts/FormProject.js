@@ -100,7 +100,8 @@ function FormProject() {
       <label className="form-label label-FormProject" htmlFor="nameProject">Nome do Projeto</label>
         <input type="text" style={{marginBottom:"20px"}} id="nameProject" name='nameProject' 
         className="form-control input-FormProject" 
-        placeholder="Insira o nome do projeto" required onChange={((e) => 
+        placeholder="Insira o nome do projeto"
+        pattern='[A-Za-z]{5,16}' required onChange={((e) => 
         setNameProject(e.target.value)
         )}/>
         
@@ -110,7 +111,7 @@ function FormProject() {
     <div className="col">
       <div className="form">
       <label className="form-label label-FormProject" htmlFor="orcamento">Orçamento</label>
-        <input type="number" id="orcamento" name='orcamento'   className="form-control input-FormProject"
+        <input type="number" min={500} max={3333} id="orcamento" name='orcamento'   className="form-control input-FormProject"
          placeholder="Insira o orçamento do projeto" required onChange={((e) => {
             setOrcamento(e.target.value)
          })}/>
