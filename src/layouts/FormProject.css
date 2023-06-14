@@ -69,30 +69,28 @@
 
 }
 
-.p-FormProject-ok {
+.alert-FormProject-ok {
 
-    background-color: green;
+    /* background-color: green;
     font-size: 20px;
     text-align: center;
     font-weight:bold;
     color: white;
     padding: 10px;
-    border-radius: 20px;
+    border-radius: 20px; */
     margin-bottom: 40px;
 
 
 }
 
-.p-FormProject-nope {
+.icon-FormProject {
+    color: rgb(7, 190, 7);
+    margin-right: 10px;
+    font-size: 25px;
+}
 
-    background-color: red;
-    font-size: 20px;
+.container-alert-FormProject {
+
     text-align: center;
-    font-weight:bold;
-    color: white;
-    padding: 10px;
-    border-radius: 20px;
-    margin-bottom: 40px;
-
-
+    font-weight: bold;
 }

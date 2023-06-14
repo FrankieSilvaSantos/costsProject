@@ -4,6 +4,9 @@ import { useEffect } from 'react'
 import {UseHistory} from 'react-router-dom';
 import axios from 'axios';
 import React from 'react';
+import { Link } from 'react-router-dom';
+import {BsFillCheckCircleFill} from 'react-icons/bs'
+
 
 function FormProject() {
 
@@ -151,7 +154,9 @@ function FormProject() {
          {nameProject2 && orcamento2 && categories2 && (
         
    
-        <p className='p-FormProject-ok'>Cadastrado com Sucesso!! c:</p>
+        <div class="alert alert-success container-alert-FormProject" role="alert">
+        <BsFillCheckCircleFill className='icon-FormProject'></BsFillCheckCircleFill>Projeto cadastrado com sucesso!!
+      </div>
        
          )}
          
