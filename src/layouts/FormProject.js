@@ -53,7 +53,7 @@ function FormProject() {
         
       <div>
       <select className="form-select select-FormProject" defaultValue={'DEFAULT'} name='category-id' aria-label="Default select example">
-  <option selected value="DEFAULT" disabled>Selecione uma opção</option>
+  <option  value="DEFAULT" disabled>Selecione uma opção</option>
   {categories.map((category) => (
     <option value={category.id} key={category.id}>{category.name}</option>
   ))}
