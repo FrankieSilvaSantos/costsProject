@@ -2,3 +2,23 @@
     display: flex;
     justify-content: end;
 }
+
+.anchor-style {
+
+    color: #fff;
+    
+
+}
+
+.anchor-style:hover {
+    color: #ffbb33;
+    border-bottom:2px solid #ffbb33 ;
+}
+
+.nav-style {
+    background-color: #222;
+}
+
+.ul-style {
+    margin-right: 3em;
+}

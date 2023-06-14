@@ -7,6 +7,7 @@ import Contato from './layouts/Contato';
 import Companhia from './layouts/Companhia';
 import NovoProjeto from './layouts/NovoProjeto';
 import Footer from './layouts/Footer';
+import Projeto from './layouts/Projeto';
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
 
     <Route path='/novoprojeto' element={<NovoProjeto></NovoProjeto>}></Route>
 
+    <Route path='/projeto' element={<Projeto></Projeto>}></Route>
 
     
    </Routes>
