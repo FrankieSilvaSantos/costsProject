@@ -1,0 +1,14 @@
+.paragrafo-messages {
+   
+    text-align: center;
+    border: 1px solid #000;
+    margin: 0 auto;
+    padding: 1.3em;
+    width: 20em;
+    border-radius: 20px;
+}
+
+.container-messages {
+     margin-top: 30px;
+    
+}
