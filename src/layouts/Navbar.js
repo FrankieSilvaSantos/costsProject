@@ -15,7 +15,7 @@ function Navbar() {
     <div className="collapse navbar-collapse navbar-positioning" id="navbarNav">
       <ul className="navbar-nav ul-style">
         <li className="nav-item">
-          <Link className="nav-link anchor-style" aria-current="page" to="/">Home</Link>
+          <Link className="nav-link anchor-style" to="/">Home</Link>
         </li>
         <li className="nav-item">
           <Link className="nav-link anchor-style" to="/contato">Contato</Link>
