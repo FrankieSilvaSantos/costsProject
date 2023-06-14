@@ -48,7 +48,7 @@ function Footer() {
  
   <div className="text-center p-3"    style={{backgroundColor: "rgba(0, 0, 0, 0.2)"}}>
     Costs© 
-    <Link className="text-white copyright-style" href="https://www.linkedin.com/in/frankie-silva-santos-5968451ab/"> <span className='span-style'> FrankieSilvaSantos</span></Link>
+    <Link className="text-white copyright-style" to="https://www.linkedin.com/in/frankie-silva-santos-5968451ab/"> <span className='span-style'> FrankieSilvaSantos</span></Link>
   </div>
   
 </footer>
