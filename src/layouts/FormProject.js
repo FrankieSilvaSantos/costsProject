@@ -8,10 +8,10 @@ import React from 'react';
 function FormProject() {
 
        
-    
+
 
     
-
+   
    
     
      const [nameProject,setNameProject] = useState()
@@ -32,7 +32,7 @@ function FormProject() {
 
     function fetchData() {
         
-
+        
 
     fetch("http://localhost:5000/categories")
     
@@ -92,11 +92,11 @@ function FormProject() {
             console.log(response)
          })
 
-
+        
  }
- 
-    return(
 
+    return(
+   
         <>
             <form onSubmit={cadastrarForm} className='container-FormProject'>
 
@@ -149,7 +149,10 @@ function FormProject() {
   
   <button type="submit" className="btn btn-block mb-4 button-FormProject-style">Cadastrar</button>
          {nameProject2 && orcamento2 && categories2 && (
-            <p className='p-FormProject-ok'>Cadastrado com Sucesso!! c:</p>
+        
+   
+        <p className='p-FormProject-ok'>Cadastrado com Sucesso!! c:</p>
+       
          )}
          
 
