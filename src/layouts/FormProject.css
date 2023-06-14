@@ -68,3 +68,31 @@
    
 
 }
+
+.p-FormProject-ok {
+
+    background-color: green;
+    font-size: 20px;
+    text-align: center;
+    font-weight:bold;
+    color: white;
+    padding: 10px;
+    border-radius: 20px;
+    margin-bottom: 40px;
+
+
+}
+
+.p-FormProject-nope {
+
+    background-color: red;
+    font-size: 20px;
+    text-align: center;
+    font-weight:bold;
+    color: white;
+    padding: 10px;
+    border-radius: 20px;
+    margin-bottom: 40px;
+
+
+}

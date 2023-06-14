@@ -16,9 +16,15 @@ function FormProject() {
     
      const [nameProject,setNameProject] = useState()
 
+     const [nameProject2,setNameProject2] = useState()
+
      const [orcamento,setOrcamento] = useState()
 
+     const [orcamento2,setOrcamento2] = useState()
+
      const [categories,setCategories] = useState()
+
+     const [categories2,setCategories2] = useState()
 
  
     
@@ -69,17 +75,20 @@ function FormProject() {
          axios.post("http://localhost:5000/categories") 
          .then(response => {
                 setNameProject(nameProject)
+                setNameProject2(nameProject)
                  console.log(response)
          })
 
 
          .then(response => {
             setOrcamento(orcamento)
+            setOrcamento2(orcamento)
             console.log(response)
          })
 
          .then(response => {
             setCategories(categories)
+            setCategories2(categories)
             console.log(response)
          })
 
@@ -139,7 +148,12 @@ function FormProject() {
 
   
   <button type="submit" className="btn btn-block mb-4 button-FormProject-style">Cadastrar</button>
+         {nameProject2 && orcamento2 && categories2 && (
+            <p className='p-FormProject-ok'>Cadastrado com Sucesso!! c:</p>
+         )}
+         
 
+         
 
   
   </div>
