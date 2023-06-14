@@ -1,0 +1,54 @@
+.form-container {
+    display: flex;
+    flex-direction: column;
+    width: 25em;
+    
+}
+
+
+.button-FormProject-style {
+
+    width: 10em;
+    background-color: #222;
+    color: white;
+    text-decoration: none;
+    border:1px solid #ffbb33;
+    box-shadow: none !important;
+}
+
+.button-FormProject-style:hover,  .button-FormProject-style:active,.button-FormProject-style:focus, .button-FormProject-style:visited {
+
+    background-color: black !important;
+    border: #ffbb33;
+    outline: #ffbb33;
+    box-shadow: 2px 2px #ffbb33 !important;
+    color: #ffbb33 !important;
+}
+
+.container-FormProject {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+
+}
+
+.label-FormProject {
+
+    font-weight: bold;
+
+}
+
+.input-FormProject {
+
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.input-FormProject:active, .input-FormProject:focus {
+
+    border:2px solid #ffbb33 !important;
+    outline:1px solid #ffbb33 !important;   
+    box-shadow: 5px 5px #222 !important;
+    
+}
