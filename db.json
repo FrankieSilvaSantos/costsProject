@@ -1,21 +1,18 @@
 {
-        
   "categories": [
-      {
-          "id": 1,
-          "name": "infra"
-      },
-      {
-          "id": 2,
-          "name": "Desenvolvimento"
-      },
-      {
-          "id": 3,
-          "name": "Design"
-      },
-      {
-          "id": 4,
-          "name": "Planejamento"
-      }
+    {
+      "id": 1,
+      "nameProject": "",
+      "categoriesName": "infra"
+    },
+    {
+      "id": 2
+    },
+    {
+      "nameProject": "IdidIt",
+      "orcamento": "321312321",
+      "categories": "Desenvolvimento",
+      "id": 3
+    }
   ]
 }
