@@ -4,3 +4,23 @@
     bottom: 0;
     right: 0;
 }
+
+
+.copyright-style {
+    text-decoration: none;
+    color: #fff;
+}
+
+.span-style {
+    color: #fff;
+}
+
+.span-style:hover {
+    text-decoration: underline;
+    color: #ffbb33;
+}
+
+.socials-style:hover {
+
+    background-color: #ffbb33;
+}
