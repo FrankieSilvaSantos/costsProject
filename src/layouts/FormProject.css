@@ -52,3 +52,19 @@
     box-shadow: 5px 5px #222 !important;
     
 }
+
+.select-FormProject {
+
+    margin-top: 30px;
+    width: 15em;
+}
+
+.select-FormProject:active, .select-FormProject:focus {
+
+   
+    border:2px solid #ffbb33 !important;
+    outline:1px solid #ffbb33 !important;   
+    box-shadow: 5px 5px #222 !important;
+   
+
+}
