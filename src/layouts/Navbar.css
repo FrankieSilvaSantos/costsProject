@@ -23,3 +23,16 @@
 .ul-style {
     margin-right: 3em;
 }
+
+.toggler-style1 {
+    color: #222;
+    background-color: #fff;
+}
+
+.toggler-style1:focus, .toggler-style1:active {
+
+ 
+
+    border:2px solid #ffbb33;
+
+}
