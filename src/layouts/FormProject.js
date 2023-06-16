@@ -1,24 +1,28 @@
 import './FormProject.css'
-import { useState } from 'react'
+
 import { useEffect } from 'react'
-import { Navigate, useNavigate } from 'react-router-dom';
-
-
-import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
+import { useState } from 'react';
 import React from 'react';
-import { Link } from 'react-router-dom';
+
+
+import axios from "axios";
+
+
 import { BsFillCheckCircleFill } from 'react-icons/bs'
 
 
 
 function FormProject() {
 
+   
+
 
     const navigate = useNavigate()
 
 
 
-
+    const [data, setData] = useState([])
 
     const [nameProject, setNameProject] = useState()
 
@@ -33,102 +37,71 @@ function FormProject() {
     const [categories2, setCategories2] = useState()
 
 
+     useEffect(() => {
+         axios.get('http://localhost:5000/categories')
+             .then(response => {
+                 console.log('Api dados', response.data)
+                 setData(response.data)
+             })
+
+     }, [])
+
+    
 
 
-
-    function fetchData() {
-        
-
-
-        fetch("http://localhost:5000/categories")
-
-
-            .then(response => {
-                return response.json()
-            })
-
-            .then(data => {
-                setCategories(data)
-            })
-
-            .then(data2 => {
-                setNameProject(data2)
-            })
-
-            .then(data3 => {
-                setOrcamento(data3)
-            })
-
-
-
-    }
-    useEffect(() => {
-        fetchData()
-    }, [])
 
 
     function cadastrarForm(e) {
-        e.preventDefault()
+
+            e.preventDefault()
+
+            axios.post('http://localhost:5000/categories', {
+
+                nameProject,
+                orcamento,
+                categories,
 
 
 
-        axios.post('http://localhost:5000/categories', {
-
-            nameProject: nameProject,
-            orcamento: orcamento,
-            categories: categories
+            }).then(() => {
+                    setTimeout(() => navigate("/projeto"), 2000);
 
 
-        })
+                    
 
 
-        axios.post("http://localhost:5000/categories")
-            .then(response => {
+                })
 
+                .then(() => {
+                 
+                    setNameProject2(nameProject)
 
-                setNameProject(nameProject)
-                setNameProject2(nameProject)
-                console.log(response)
-            }
-            )
+                })
 
+                .then(() => {
+                 
+                    setOrcamento2(orcamento)
 
-            .then(response => {
-                setOrcamento(orcamento)
-                setOrcamento2(orcamento)
-                console.log(response)
-            })
+                })
 
-            .then(response => {
-                setCategories(categories)
-                setCategories2(categories)
-                console.log(response)
+                .then(() => {
+                 
+                    setCategories2(categories)
 
-
-            })
-
-            .then(response => {
-                setTimeout(() => navigate("/projeto"), 3000);
-                
-
-                console.log(response)
-
-
-            })
-
-
-
+                })
 
     }
 
-
-
-
-
     return (
 
-        <>
-            <form onSubmit={cadastrarForm} className='container-FormProject'>
+
+        <div>
+
+
+            <form onSubmit={cadastrarForm}
+
+
+                className='container-FormProject'>
 
                 <div>
                     <div className="row mb-4 form-container">
@@ -140,7 +113,7 @@ function FormProject() {
                                 <input type="text" style={{ marginBottom: "20px" }} id='nameProject' name='nameProject'
                                     className="form-control input-FormProject"
                                     placeholder="Insira o nome do projeto"
-                                    pattern='[A-Za-z]{5,16}' required onChange={((e) =>
+                                    pattern='[A-Z a-z0-9]{5,16}' required onChange={((e) =>
                                         setNameProject(e.target.value)
                                     )} />
 
@@ -158,7 +131,7 @@ function FormProject() {
                             </div>
 
                             <div>
-                                <select className="form-select select-FormProject" onChange={((e) => { setCategories(e.target.value) })} defaultValue={'DEFAULT'} name='categoriesName[]' id='categoriesName' aria-label="Default select example">
+                                <select className="form-select select-FormProject" onChange={((e) => { setCategories(e.target.value) })} defaultValue={'DEFAULT'} name='categoriesName' id='categoriesName' aria-label="Default select example">
                                     <option value="DEFAULT" disabled>Selecione uma opção</option>
 
                                     <option value={'Infra'}>Infra</option>
@@ -177,7 +150,7 @@ function FormProject() {
 
 
 
-                    <button type='submit' className="btn btn-block mb-4 button-FormProject-style">Cadastrar</button>
+                    <button className="btn btn-block mb-4 button-FormProject-style">Cadastrar</button>
 
 
 
@@ -187,7 +160,7 @@ function FormProject() {
                     {nameProject2 && orcamento2 && categories2 && (
 
                         <div className="alert alert-success container-alert-FormProject" role="alert">
-                          <BsFillCheckCircleFill className='icon-FormProject    '></BsFillCheckCircleFill> Projeto cadastrado com sucesso!!
+                            <BsFillCheckCircleFill className='icon-FormProject    '></BsFillCheckCircleFill> Projeto cadastrado com sucesso!!
                         </div>
                     )}
 
@@ -211,31 +184,7 @@ function FormProject() {
                 </div>
             </form>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        </>
+        </div>
 
     )
 

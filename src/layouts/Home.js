@@ -14,7 +14,7 @@ function Home() {
 
         <section className='container-button-home'>
             
-        <Link  to={'./novoprojeto'}><button type="button" className="btn button-home-style">Criar Projeto</button></Link>
+        <Link   to={'/novoprojeto'}><button type="button" className="btn button-home-style">Criar Projeto</button></Link>
         </section>
 
 
