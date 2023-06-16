@@ -31,7 +31,7 @@ function Messages({ props }) {
             
 
                 
-               return <ul className="list-group list-messages-positioning">
+               return <ul key={items.id} className="list-group list-messages-positioning">
 
 
                      <li className="list-group-item list-messages-style">
