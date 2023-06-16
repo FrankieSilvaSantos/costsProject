@@ -1,12 +1,38 @@
 .titulo-projeto {
     margin-top: 60px;
-    text-align: center;
+    margin-left: 2em;
+    text-align: left;
     font-weight: bold;
 }
 
-.icon-projeto {
+/* .icon-projeto {
     color: green;
     padding:15px;
     
 
+} */
+
+.container-projeto {
+    display: flex;
+    justify-content: space-between;
+}
+
+.button-projeto-style {
+
+    background-color: #222;
+    color: white;
+    text-decoration: none;
+    border:1px solid #ffbb33;
+    box-shadow: none !important;
+    margin-right: 30px;
+    height: 40px;
+}
+
+ .button-projeto-style:hover,  .button-home-style:active,.button-home-style:focus, .button-home-style:visited {
+
+    background-color: black !important;
+    border: #ffbb33;
+    outline: #ffbb33;
+    box-shadow: 2px 2px #ffbb33 !important;
+    color: #ffbb33 !important;
 }

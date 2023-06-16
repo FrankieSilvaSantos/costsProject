@@ -13,10 +13,10 @@ function Messages({props}) {
 
 
     return(
-        <>
       
-            
-            </>
+        <section className='container-messages'>
+            <p className='paragrafo-messages'>Projetos...</p>
+        </section>
     )
 }
 

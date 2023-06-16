@@ -8,20 +8,22 @@ import { Navigate } from 'react-router-dom';
 
 function Projeto() {
 
-   
-  
 
-    return(
+
+
+    return (
 
         <>
-            <h1 className="titulo-projeto">Meus Projetos</h1>
+
+           
+                <h1 className="titulo-projeto">Meus Projetos</h1>
+
+                <section className='container-projeto'>
 
 
-        
-
-        <Messages></Messages>
-        
-            
+                <Messages></Messages>
+                <button type="button" className="btn button-projeto-style">Criar Projeto</button>
+            </section>
         </>
 
     )
