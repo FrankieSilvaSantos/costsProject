@@ -14,12 +14,41 @@
 }
 
 .list-messages-positioning {
+    margin-top: 1em;
+    margin-left: 1em;
+    width: 19em;
+  
+}
 
-    margin-left: 5em;
-    width: 17em;
+.titulo-list-messages {
+    background-color: #222;
+    color: #ffbb33;
+    padding: 4px;
+}
+
+.container-messages-list {
+    display: flex;
+    margin-left: 4em;
 }
 
 .list-messages-style {
     border: 2px solid black;
+    
+    
+}
+
+.span-messages-style {
+    color: #7b7b7b;
+}
+
+.titulo-span-messages {
     font-weight: bold;
+}
+
+.icon-orcamento-style {
+    color: green;
+}
+
+.icon-categorias-style {
+    color: blue;
 }
