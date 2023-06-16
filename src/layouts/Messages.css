@@ -12,3 +12,14 @@
      margin-top: 30px;
  
 }
+
+.list-messages-positioning {
+
+    margin-left: 5em;
+    width: 17em;
+}
+
+.list-messages-style {
+    border: 2px solid black;
+    font-weight: bold;
+}

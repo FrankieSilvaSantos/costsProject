@@ -4,7 +4,7 @@ import FormProject from './FormProject';
 import { BsFillCheckCircleFill } from "react-icons/bs";
 import { useLocation } from 'react-router-dom';
 import { Navigate } from 'react-router-dom';
-
+import { Link } from 'react-router-dom';
 
 function Projeto() {
 
@@ -15,15 +15,15 @@ function Projeto() {
 
         <>
 
-           
+            <section className='container-projeto'>
                 <h1 className="titulo-projeto">Meus Projetos</h1>
-
-                <section className='container-projeto'>
-
-
-                <Messages></Messages>
-                <button type="button" className="btn button-projeto-style">Criar Projeto</button>
+                <Link to={'/novoprojeto'}><button type="button" className="btn button-projeto-style">Criar Projeto</button></Link>
             </section>
+
+
+            <Messages></Messages>
+
+
         </>
 
     )
