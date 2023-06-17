@@ -3,71 +3,117 @@ import { useState } from 'react';
 import { useEffect } from 'react';
 import axios from 'axios';
 import { BsFillCheckCircleFill } from 'react-icons/bs'
-import {BiDizzy} from 'react-icons/bi'
+import { BiDizzy, BiRefresh } from 'react-icons/bi'
+import { useNavigate, useParams } from 'react-router-dom';
 
 function Users() {
 
+    const navigate = useNavigate()
+
+   
+
+   
 
     const [data, setData] = useState([])
 
-    const [error,setError] = useState()
+    const [error, setError] = useState(false)
+
+    const [success, setSuccess] = useState()
 
     const [users, setUsers] = useState()
 
-    const [users2, setUsers2] = useState(undefined)
+    const [users2, setUsers2] = useState()
 
     const [password, setPassword] = useState()
 
-    const [password2, setPassword2] = useState(undefined)
+    const [password2, setPassword2] = useState()
 
-    useEffect(() => {
-        axios.get('http://localhost:5000/cadastro')
-            .then((response) => {
-                console.log(response.data)
-                setData(response.data)
-            })
+    // useEffect(() => {
+    //     axios.get('http://localhost:5000/cadastro')
+    //         .then((response) => {
 
-    }, [])
+    //             setData(response.data)
+    //         })
+
+    // }, [])
+
+
+
+
+    //     setUsers('')
+    //     setPassword('')
+    //     setPassword2(password)
+    //     setUsers2(users)
+
+
+    // }
+    // data.map((items) => {
+    //     if(items.users === document.getElementsByName('users').value && items.password === document.getElementsByName('password').value) {
+
+    //       console.log('logado')
+    //     }
+    //     return <div className="alert alert-success container-alert-FormProject" role="alert">
+    //     <BsFillCheckCircleFill className='icon-FormProject'></BsFillCheckCircleFill> Projeto cadastrado com sucesso!!
+    // </div>
+
+    // })
 
     function handleClick(e) {
 
         e.preventDefault()
 
-        //     setUsers('')
-        //     setPassword('')
-        //     setPassword2(password)
-        //     setUsers2(users)
 
 
-        // }
-        // data.map((items) => {
-        //     if(items.users === document.getElementsByName('users').value && items.password === document.getElementsByName('password').value) {
+        axios.get(`http://localhost:5000/cadastro`)
 
-        //       console.log('logado')
-        //     }
-        //     return <div className="alert alert-success container-alert-FormProject" role="alert">
-        //     <BsFillCheckCircleFill className='icon-FormProject'></BsFillCheckCircleFill> Projeto cadastrado com sucesso!!
-        // </div>
 
-        // })
-        data.map((items) => {
-            return axios.get(`http://localhost:5000/cadastro/${items.id}`)
-                .then(() => setUsers2(users))
-                .then(() => setPassword2(password))
+            .then((response) => {
+                setData(response.data)
+                console.log(response.data)
 
-                .then(() => {if(items.users ===  users && items.password === password) {
-                    console.log('logado');
-                   
-                } else {
-                    console.log('erro ao logar') ;
-                    setError(false)
+            })
+            .then(() => setUsers2(users))
+            .then(() => setPassword2(password))
+
+
+
+            .then(() => {
+
+                // eslint-disable-next-line no-lone-blocks
+                {
+                    data.map((items) => {
+
+                        if (items.users !== users && items.password !== password) {
+                            console.log('erro ao logar');
+                            setTimeout(() => window.location.reload(), 1000);
+                            return setError(true)
+
+                        } else {
+
+                            console.log('logado');
+                            setTimeout(() => navigate('/'), 1000);
+                            return setSuccess(true)
+
+                        }
+
+                    })
+
+
                 }
-                })
-                
-
-              
-        })
+            })
     }
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -75,15 +121,13 @@ function Users() {
         <>
 
             <h1 className='titulo-users'>Faça seu Login</h1>
-        
+
             <form onSubmit={handleClick} className='container-form-users'>
                 <section className='container-inputs-users2'>
                     <div className="form mb-4 container-inputs">
                         <label style={{ fontWeight: "bold" }} className="form-label label-users" htmlFor="users">Login</label>
                         <input type="text" id="users" name='users'
-                            className="form-control input-users" pattern='[A-Za-z0-9]+' minLength={5} maxLength={15} required onChange={(e) => {
-                                setUsers(e.target.value)
-                            }} />
+                            className="form-control input-users" pattern='[A-Za-z0-9]+' minLength={5} maxLength={15} required onChange={(e) => setUsers(e.target.value)} />
 
                     </div>
                 </section>
@@ -93,9 +137,7 @@ function Users() {
                     <div className="form mb-4 container-inputs">
                         <label style={{ fontWeight: "bold" }} className="form-label label-users" htmlFor="password">Senha</label>
                         <input type="password" id="password" name='password'
-                            className="form-control input-users"  maxLength={8} required onChange={(e) => {
-                                setPassword(e.target.value)
-                            }} />
+                            className="form-control input-users" maxLength={8} required onChange={(e) => setPassword(e.target.value)} />
 
                     </div>
                 </section>
@@ -117,22 +159,23 @@ function Users() {
   </div> */}
 
                 <section className='container-button-users'>
-                    <button className="btn btn-primary btn-block button-users">Entrar</button>
+                    <button type='submit' className="btn btn-primary btn-block button-users">Entrar</button>
 
 
 
                 </section>
-                       
-                   
 
-                {data.map((items) =>
+
+
+                {/* {data.map((items) =>
                            { if(items.users === users2 && items.password === password2) {
                             return  <div key={items.id} className='container-alert-users2'>  <div  className="alert alert-success container-alert-users" role="alert">
                             <BsFillCheckCircleFill className='icon-users'></BsFillCheckCircleFill> Projeto cadastrado com sucesso!!
                          
                         </div>
                         </div>
-                           }if(error === false) { 
+                           }    */}
+                {/* if(error === false) { 
                            
                            return <div key={items.id} className='container-alert-users2'> <div className="alert alert-danger container-alert-users" role="alert">
                            <BiDizzy className='icon-error-users '></BiDizzy> Login ou senha incorretos!!
@@ -140,15 +183,31 @@ function Users() {
                           </div>
                                 }} 
      
-                         )}
-                           
-                           
-                   
+                         )} */}
+
+
+
 
             </form >
 
+            {success && (
+                <div className='container-alert-users2'>  <div className="alert alert-success container-alert-users" role="alert">
+                    <BsFillCheckCircleFill className='icon-users'></BsFillCheckCircleFill> Projeto cadastrado com sucesso!!
 
-          
+                </div>
+                </div>
+            )}
+            {error && (
+
+                <div  className='container-alert-users2'> <div className="alert alert-danger container-alert-users" role="alert">
+                    <BiDizzy className='icon-error-users '></BiDizzy> Login ou senha incorretos!!
+                </div>
+                </div>
+            )}
+
+
+
+
         </>
     )
 }

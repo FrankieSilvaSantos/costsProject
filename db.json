@@ -25,6 +25,11 @@
     "users":"Franzie",
     "password":"12345678",
     "id": 1
+    },
+    {
+    "users":"Joshua",
+    "password":"12345678",
+    "id": 2
     }
   ]
 }

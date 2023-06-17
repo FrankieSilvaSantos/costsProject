@@ -12,6 +12,7 @@ import Users from './layouts/Users';
 
 
 
+
 function App() {
 
   
@@ -24,7 +25,7 @@ function App() {
     
     <Router>
    <Navbar></Navbar>
-  
+
 
    <Routes>
    
@@ -41,6 +42,10 @@ function App() {
     <Route path='/editar/:id'    element={<Editar></Editar>}></Route>
 
     <Route path='/users' element={<Users></Users>}></Route>
+
+
+
+   
 
     
    </Routes>
