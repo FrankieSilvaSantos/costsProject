@@ -29,6 +29,9 @@ function Navbar() {
         <li className="nav-item">
           <Link className="nav-link anchor-style" to='/projeto'>Projeto</Link>
         </li>
+        <li className="nav-item">
+          <Link className="nav-link anchor-style" to='/users'>Entrar</Link>
+        </li>
        
       </ul>
     </div>

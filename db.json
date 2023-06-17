@@ -18,5 +18,13 @@
       "categories": "Desenvolvimento",
       "id": 3
     }
+  ],
+
+  "cadastro": [
+    {
+    "users":"Franzie",
+    "password":"12345678",
+    "id": 1
+    }
   ]
 }

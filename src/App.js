@@ -8,6 +8,7 @@ import NovoProjeto from './layouts/NovoProjeto';
 import Footer from './layouts/Footer';
 import Projeto from './layouts/Projeto';
 import Editar from './layouts/Editar';
+import Users from './layouts/Users';
 
 
 
@@ -38,6 +39,8 @@ function App() {
     <Route path='/projeto' element={<Projeto></Projeto>}></Route>
 
     <Route path='/editar/:id'    element={<Editar></Editar>}></Route>
+
+    <Route path='/users' element={<Users></Users>}></Route>
 
     
    </Routes>
