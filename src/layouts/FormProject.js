@@ -160,7 +160,7 @@ function FormProject() {
                     {nameProject2 && orcamento2 && categories2 && (
 
                         <div className="alert alert-success container-alert-FormProject" role="alert">
-                            <BsFillCheckCircleFill className='icon-FormProject    '></BsFillCheckCircleFill> Projeto cadastrado com sucesso!!
+                            <BsFillCheckCircleFill className='icon-FormProject'></BsFillCheckCircleFill> Projeto cadastrado com sucesso!!
                         </div>
                     )}
 

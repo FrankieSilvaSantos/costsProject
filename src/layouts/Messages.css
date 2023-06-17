@@ -8,15 +8,13 @@
     /* border-radius: 20px; */
 }
 
-.container-messages {
-     margin-top: 30px;
- 
-}
+
 
 .list-messages-positioning {
     margin-top: 1em;
-    margin-left: 1em;
-    width: 19em;
+    
+    width: auto;
+    
   
 }
 
@@ -29,13 +27,18 @@
 .container-messages-list {
     display: flex;
     margin-left: 4em;
+    gap: 1em;
+    box-sizing: border-box;
+    width: 100%;
+    
 }
 
 .list-messages-style {
     border: 2px solid black;
-    
-    
-}
+    height: 13.5em;
+    box-sizing: border-box;
+    width: auto;
+}   
 
 .span-messages-style {
     color: #7b7b7b;
@@ -51,4 +54,39 @@
 
 .icon-categorias-style {
     color: blue;
+}
+
+.container-button-messages {
+    display: flex;
+    height: 3em;
+    
+}
+
+.button-messages-style {
+
+    background-color: white;
+    color: #222;
+    text-decoration: none;
+    border:1px solid #222;
+    box-shadow: none !important;
+    margin-right: 30px;
+    box-sizing: border-box;
+    font-size: 12px;
+    height: 40px;
+    padding: 0 1em 0 1em;
+    margin-top: 20px;
+}
+
+ .button-messages-style:hover,  .button-home-style:active,.button-home-style:focus, .button-home-style:visited {
+
+    background-color: rgb(0, 0, 0) !important;
+    border: #ffbb33;
+    outline: #ffbb33;
+    box-shadow: 2px 2px #ffbb33 !important;
+    color: #ffbb33 !important;
+}
+
+.icon-button-messages {
+    font-size: 15px;
+    margin-bottom: .1em;
 }

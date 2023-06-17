@@ -1,8 +1,11 @@
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import './Navbar.css';
 
 
 function Navbar() {
+
+ 
+
 
     return(
         <>
@@ -24,7 +27,7 @@ function Navbar() {
           <Link className="nav-link anchor-style" to="/companhia">Companhia</Link>
         </li>
         <li className="nav-item">
-          <Link className="nav-link anchor-style" to="/projeto">Projeto</Link>
+          <Link className="nav-link anchor-style" to='/projeto'>Projeto</Link>
         </li>
        
       </ul>

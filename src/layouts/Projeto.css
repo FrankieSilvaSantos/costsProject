@@ -12,9 +12,19 @@
 
 } */
 
-.container-projeto {
+.container-items {
     display: flex;
     justify-content: space-between;
+}
+
+.container-projeto {
+ 
+    width: 100%;
+}
+
+.container-messages {
+    box-sizing: border-box;
+    width: auto;
 }
 
 .button-projeto-style {

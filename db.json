@@ -1,22 +1,16 @@
 {
   "categories": [
     {
-      "nameProject": "teste",
-      "orcamento": "3333",
-      "categories": "Design",
+      "nameProject": "Frankie Yoogan",
+      "orcamento": "2345",
+      "categories": "Desenvolvimento",
       "id": 1
     },
     {
-      "nameProject": "FranZ 123",
-      "orcamento": "1200",
-      "categories": "Desenvolvimento",
+      "nameProject": "Luh Luna",
+      "orcamento": "2500",
+      "categories": "Design",
       "id": 2
-    },
-    {
-      "nameProject": "teste",
-      "orcamento": "3333",
-      "categories": "Planejamento",
-      "id": 3
     }
   ]
 }
