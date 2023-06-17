@@ -8,6 +8,18 @@
     width: 20em;
 
     margin: 0 0 0 30px;
+
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.input-users:active, .input-users:focus {
+
+    border:2px solid #ffbb33 !important;
+    outline:1px solid #ffbb33 !important;   
+    box-shadow: 5px 5px #222 !important;
+    
 }
 
 .label-users {
