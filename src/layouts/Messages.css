@@ -28,39 +28,66 @@
     display: flex;
     margin-left: 4em;
     gap: 1em;
-    box-sizing: border-box;
     width: 100%;
+ 
+}
+
+.container-texto-lista-messages {
+  position: relative;
+  bottom: 13px;
+  font-size: 15px;
+  box-sizing: border-box;
+}
+
+.container-messages-list:hover .list-messages-style   {
+    
+    height: 12.5em;
+}
+
+
+.container-messages-list:hover .container-button-messages  {
+    display: flex;
     
 }
 
+
+
+
 .list-messages-style {
     border: 2px solid black;
-    height: 13.5em;
-    box-sizing: border-box;
-    width: auto;
+    height:8em;
+    /* height: 13.5em; */
+   
+    width: 17em;
+    transition-duration: 0.2s;
 }   
 
 .span-messages-style {
     color: #7b7b7b;
+   
 }
 
 .titulo-span-messages {
     font-weight: bold;
+    
 }
 
 .icon-orcamento-style {
     color: green;
+    
 }
 
 .icon-categorias-style {
     color: blue;
+    
 }
 
 .container-button-messages {
-    display: flex;
-    height: 3em;
-    
+     display: none;
+    transition-delay: 10s;
 }
+
+
 
 .button-messages-style {
 
@@ -73,9 +100,12 @@
     box-sizing: border-box;
     font-size: 12px;
     height: 40px;
-    padding: 0 1em 0 1em;
-    margin-top: 20px;
+    
+    margin-top: 10px;
+    width: 95px;
 }
+
+
 
  .button-messages-style:hover,  .button-home-style:active,.button-home-style:focus, .button-home-style:visited {
 
