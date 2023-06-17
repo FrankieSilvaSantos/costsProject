@@ -1,19 +1,11 @@
-.paragrafo-messages {
-   
-    text-align: left;
-    /* border: 1px solid #000; */
-    margin-left: 5.2em;
-    /* padding: 1.3em; */
-    width: 20em;
-    /* border-radius: 20px; */
-}
+
 
 
 
 .list-messages-positioning {
     margin-top: 1em;
     
-    width: auto;
+
     
   
 }
@@ -26,10 +18,14 @@
 
 .container-messages-list {
     display: flex;
-    margin-left: 4em;
+    align-items: center;
+    justify-content: start;
+    margin-left: 2.2em;
     gap: 1em;
     width: 100%;
- 
+    box-sizing: border-box;
+
+    
 }
 
 .container-texto-lista-messages {
@@ -41,13 +37,13 @@
 
 .container-messages-list:hover .list-messages-style   {
     
-    height: 12.5em;
+    height: 13em;
 }
 
 
 .container-messages-list:hover .container-button-messages  {
     display: flex;
-    
+    gap: 1em;
 }
 
 
@@ -55,12 +51,18 @@
 
 .list-messages-style {
     border: 2px solid black;
-    height:8em;
-    /* height: 13.5em; */
-   
-    width: 17em;
+    height:9em;
+    
+    padding: 1m 1em 0 1em;
+    width:auto;
     transition-duration: 0.2s;
 }   
+
+.list-messages-positioning {
+    box-sizing: content-box;
+    
+}
+
 
 .span-messages-style {
     color: #7b7b7b;
@@ -96,12 +98,12 @@
     text-decoration: none;
     border:1px solid #222;
     box-shadow: none !important;
-    margin-right: 30px;
+    /* margin-right: 30px; */
     box-sizing: border-box;
     font-size: 12px;
     height: 40px;
     
-    margin-top: 10px;
+     margin-top: 0.5em; 
     width: 95px;
 }
 
