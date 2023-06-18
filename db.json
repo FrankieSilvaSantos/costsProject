@@ -7,29 +7,33 @@
       "id": 1
     },
     {
-      "nameProject": "Rebecaaaa",
-      "orcamento": "550",
-      "categories": "Infra",
+      "nameProject": "Ivy Arvrock",
+      "orcamento": "777",
+      "categories": "Design",
       "id": 2
     },
     {
-      "nameProject": "JoselitoOBravo2",
-      "orcamento": "3200",
-      "categories": "Desenvolvimento",
+      "nameProject": "Joshua Kipp22",
+      "orcamento": "760",
+      "categories": "Infra",
       "id": 3
     }
   ],
-
   "cadastro": [
     {
-    "users":"Franzie",
-    "password":"12345678",
-    "id": 1
+      "users": "Franzie",
+      "password": "12345678",
+      "id": 1
     },
     {
-    "users":"Joshua",
-    "password":"12345678",
-    "id": 2
+      "users": "Joshua",
+      "password": "12345678",
+      "id": 2
+    },
+    {
+    "users": "Gamboa",
+    "password": "12345678",
+    "id": 3
     }
   ]
 }

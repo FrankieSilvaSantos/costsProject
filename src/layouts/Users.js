@@ -5,20 +5,33 @@ import axios from 'axios';
 import { BsFillCheckCircleFill } from 'react-icons/bs'
 import { BiDizzy, BiRefresh } from 'react-icons/bi'
 import { useNavigate, useParams } from 'react-router-dom';
+import Navbar from './Navbar';
+import App from '../App';
+
+
+
+// eslint-disable-next-line react-hooks/rules-of-hooks
+
+
 
 function Users() {
 
     const navigate = useNavigate()
 
-   
 
+  
    
+    
+
+
+
+
 
     const [data, setData] = useState([])
 
-    const [error, setError] = useState(false)
+    const [error, setError] = useState(true)
 
-    const [success, setSuccess] = useState()
+    const [success, setSuccess] = useState(false)
 
     const [users, setUsers] = useState()
 
@@ -28,48 +41,22 @@ function Users() {
 
     const [password2, setPassword2] = useState()
 
-    // useEffect(() => {
-    //     axios.get('http://localhost:5000/cadastro')
-    //         .then((response) => {
-
-    //             setData(response.data)
-    //         })
-
-    // }, [])
+  
 
 
 
-
-    //     setUsers('')
-    //     setPassword('')
-    //     setPassword2(password)
-    //     setUsers2(users)
-
-
-    // }
-    // data.map((items) => {
-    //     if(items.users === document.getElementsByName('users').value && items.password === document.getElementsByName('password').value) {
-
-    //       console.log('logado')
-    //     }
-    //     return <div className="alert alert-success container-alert-FormProject" role="alert">
-    //     <BsFillCheckCircleFill className='icon-FormProject'></BsFillCheckCircleFill> Projeto cadastrado com sucesso!!
-    // </div>
-
-    // })
 
     function handleClick(e) {
 
         e.preventDefault()
 
-
-
+      
         axios.get(`http://localhost:5000/cadastro`)
 
 
             .then((response) => {
                 setData(response.data)
-                console.log(response.data)
+
 
             })
             .then(() => setUsers2(users))
@@ -79,29 +66,58 @@ function Users() {
 
             .then(() => {
 
-                // eslint-disable-next-line no-lone-blocks
-                {
-                    data.map((items) => {
-
-                        if (items.users !== users && items.password !== password) {
-                            console.log('erro ao logar');
-                            setTimeout(() => window.location.reload(), 1000);
-                            return setError(true)
-
-                        } else {
-
-                            console.log('logado');
-                            setTimeout(() => navigate('/'), 1000);
-                            return setSuccess(true)
-
-                        }
-
-                    })
 
 
-                }
+                data.map((items) => {
+
+                    if (items.users !== users2 && items.password !== password2) {
+                        console.log('erro ao logar');
+                        setTimeout(() => window.location.reload(), 1000);
+                        return setError(false)
+
+
+                    }
+                })
+
             })
+
+            .then(() => {
+
+
+                data.map((items) => {
+                   
+                    if (items.users === users2 && items.password === password2) {
+                        const item = items.users
+                        // for (var i = 0; i < item.length; i++) {
+                        //     var current = item[i]
+                            
+                        // }
+
+                     
+                        console.log('logado');
+                        console.log(item)
+                        localStorage.setItem('id',items.id)
+                        localStorage.setItem('user',item)
+                  
+                        setTimeout(() => navigate(`/${localStorage.getItem('id')}`), 1000);
+                        
+                     return   setSuccess(true)
+                   
+                     
+                    }
+
+                })
+
+
+            })
+
+
+
+
+
+
     }
+
 
 
 
@@ -142,48 +158,15 @@ function Users() {
                     </div>
                 </section>
 
-                {/* <div className="row mb-4">
-                    <div className="col d-flex justify-content-center">
-
-                        <div className="form-check">
-                            <input className="form-check-input" type="checkbox" value="" id="form1Example3" checked />
-                            <label className="form-check-label" htmlFor="form1Example3"> Remember me </label>
-                        </div>
-                    </div>
-                </div> */}
-
-                {/* <div className="col">
-      
-      <a href="#!">Forgot password?</a>
-    </div>
-  </div> */}
+            
 
                 <section className='container-button-users'>
-                    <button type='submit' className="btn btn-primary btn-block button-users">Entrar</button>
+                    <button className="btn btn-primary btn-block button-users">Entrar</button>
 
 
 
                 </section>
 
-
-
-                {/* {data.map((items) =>
-                           { if(items.users === users2 && items.password === password2) {
-                            return  <div key={items.id} className='container-alert-users2'>  <div  className="alert alert-success container-alert-users" role="alert">
-                            <BsFillCheckCircleFill className='icon-users'></BsFillCheckCircleFill> Projeto cadastrado com sucesso!!
-                         
-                        </div>
-                        </div>
-                           }    */}
-                {/* if(error === false) { 
-                           
-                           return <div key={items.id} className='container-alert-users2'> <div className="alert alert-danger container-alert-users" role="alert">
-                           <BiDizzy className='icon-error-users '></BiDizzy> Login ou senha incorretos!!
-                          </div>
-                          </div>
-                                }} 
-     
-                         )} */}
 
 
 
@@ -197,9 +180,9 @@ function Users() {
                 </div>
                 </div>
             )}
-            {error && (
+            {!error && (
 
-                <div  className='container-alert-users2'> <div className="alert alert-danger container-alert-users" role="alert">
+                <div className='container-alert-users2'> <div className="alert alert-danger container-alert-users" role="alert">
                     <BiDizzy className='icon-error-users '></BiDizzy> Login ou senha incorretos!!
                 </div>
                 </div>
@@ -209,7 +192,10 @@ function Users() {
 
 
         </>
+
     )
+
 }
 
 export default Users;
+

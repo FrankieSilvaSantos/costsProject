@@ -1,5 +1,5 @@
 import './App.css';
-import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+import {BrowserRouter as Router, Routes, Route, useParams} from 'react-router-dom';
 import Navbar from './layouts/Navbar';
 import Home from './layouts/Home';
 import Contato from './layouts/Contato';
@@ -9,27 +9,29 @@ import Footer from './layouts/Footer';
 import Projeto from './layouts/Projeto';
 import Editar from './layouts/Editar';
 import Users from './layouts/Users';
+import NavbarUsers from './layouts/NavbarUsers';
+import HomeUsers from './layouts/HomeUsers';
 
 
 
 
-function App() {
+function App({props}) {
 
-  
 
-  
+  const id = localStorage.getItem('id')
+  const params = useParams()
   
   return (
   
-
-    
-    <Router>
+ 
+<Router>
+  
    <Navbar></Navbar>
 
 
    <Routes>
    
-    <Route path='/' element={<Home></Home>}></Route>
+    <Route path={`/${id}`} element={<Home></Home>}></Route>
 
     <Route path='/contato' element={<Contato></Contato>}></Route>
 
@@ -41,15 +43,16 @@ function App() {
 
     <Route path='/editar/:id'    element={<Editar></Editar>}></Route>
 
-    <Route path='/users' element={<Users></Users>}></Route>
+    <Route path={`/users/:users`} element={<Users></Users>}></Route>
 
+    <Route path='homeusers' element={<HomeUsers></HomeUsers>}></Route>
 
 
    
 
     
    </Routes>
-   <Footer></Footer>
+   <Footer></Footer> 
    </Router>
  
 
@@ -60,4 +63,4 @@ function App() {
   )
 }
 
-export default App;
+export default  App;
